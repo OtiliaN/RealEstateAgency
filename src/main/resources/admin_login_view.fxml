@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.controller.AdminLoginController"
+            prefWidth="400.0" prefHeight="330.0" style="-fx-background-color: #fffbe5;">
+    <Label text="Login Admin" layoutX="135.0" layoutY="40.0"
+           style="-fx-font-size: 22px; -fx-text-fill: #ffe066; -fx-font-weight: bold;"/>
+    <Label text="Username:" layoutX="60.0" layoutY="100.0"/>
+    <TextField fx:id="usernameField" layoutX="150.0" layoutY="95.0" prefWidth="180.0"/>
+    <Label text="Parolă:" layoutX="60.0" layoutY="145.0"/>
+    <PasswordField fx:id="passwordField" layoutX="150.0" layoutY="140.0" prefWidth="180.0"/>
+    <Button text="Login" fx:id="loginButton"
+            layoutX="150.0" layoutY="190.0" prefWidth="100.0"
+            onAction="#handleLogin"
+            style="-fx-background-color: #ffe066; -fx-text-fill: #7d6b00;"/>
+    <Label fx:id="errorLabel" layoutX="60.0" layoutY="240.0" prefWidth="270.0"
+           style="-fx-text-fill: #db3c00; -fx-font-size: 13;" />
+    <Button text="⟵ Înapoi la pagina principală"
+            fx:id="backButton"
+            layoutX="100.0" layoutY="270.0" prefWidth="200.0"
+            onAction="#handleBack"
+            style="-fx-background-color: #fffbe5; -fx-text-fill: #ffe066; -fx-font-size: 14px; -fx-background-radius: 8;"/>
+</AnchorPane>

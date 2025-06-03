@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.controller.AgentMainController"
+            prefWidth="1000.0" prefHeight="600.0" style="-fx-background-color: #e7f0fd;">
+    <!-- Nume agent sus dreapta -->
+    <Label fx:id="agentNameLabel"
+           layoutX="720.0" layoutY="25.0"
+           style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #4682b4;" />
+
+    <!-- FlowPane pentru proprietăți -->
+    <FlowPane fx:id="propertyFlowPane" layoutX="30.0" layoutY="30.0" prefWidth="520.0" prefHeight="520.0"
+              hgap="12.0" vgap="12.0" style="-fx-background-color: #f0f6fd; -fx-border-color: #b5d1e6; -fx-padding: 12;">
+    </FlowPane>
+
+    <!-- VBox pentru Adăugare/Editare/Stergere proprietate -->
+    <VBox layoutX="580.0" layoutY="60.0" spacing="10.0" prefWidth="370.0"
+          style="-fx-background-color: #d2e6fa; -fx-padding: 18; -fx-border-radius: 14; -fx-background-radius: 14;">
+        <Label text="Adaugă / Editează Proprietate" style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #4682b4;"/>
+        <Label text="Oraș:"/>
+        <TextField fx:id="cityField" promptText="Oraș"/>
+        <Label text="Cartier:"/>
+        <TextField fx:id="neighborhoodField" promptText="Cartier"/>
+        <Label text="Tip tranzacție:"/>
+        <ComboBox fx:id="transactionTypeCombo" promptText="Alege tipul"/>
+        <Label text="Tip proprietate:"/>
+        <ComboBox fx:id="propertyTypeCombo" promptText="Alege tipul"/>
+        <Label text="Preț:"/>
+        <TextField fx:id="priceField" promptText="Preț EUR"/>
+        <Label text="Descriere:"/>
+        <TextArea fx:id="descriptionField" prefRowCount="3" promptText="Descriere"/>
+        <HBox spacing="12.0">
+            <Button text="Adaugă" onAction="#handleAddProperty" style="-fx-background-color: #4682b4; -fx-text-fill: white;"/>
+            <Button text="Update" onAction="#handleUpdateProperty" style="-fx-background-color: #5da4d6; -fx-text-fill: white;"/>
+            <Button text="Șterge" onAction="#handleDeleteProperty" style="-fx-background-color: #b3c9db; -fx-text-fill: #0a1c2e;"/>
+        </HBox>
+        <Label fx:id="errorLabel" style="-fx-text-fill: #b22222; -fx-font-size: 13;"/>
+    </VBox>
+
+    <!-- Buton logout jos dreapta -->
+    <Button fx:id="logoutButton"
+            text="Logout"
+            layoutX="880.0" layoutY="545.0"
+            prefWidth="90"
+            style="-fx-background-color: #4682b4; -fx-text-fill: white; -fx-font-weight: bold;"
+            onAction="#handleLogout"/>
+</AnchorPane>

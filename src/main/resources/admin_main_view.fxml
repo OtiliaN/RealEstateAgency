@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="520.0" prefWidth="800.0" style="-fx-background-color: #fffbe5;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.controller.AdminMainController">
+    <!-- Tabelul cu agenti -->
+    <TableView fx:id="agentTable" layoutX="30.0" layoutY="30.0" prefHeight="420.0" prefWidth="350.0">
+        <columns>
+            <TableColumn fx:id="usernameColumn" prefWidth="110.0" text="Username" />
+            <TableColumn fx:id="nameColumn" prefWidth="120.0" text="Nume" />
+            <TableColumn fx:id="phoneColumn" prefWidth="110.0" text="Telefon" />
+        </columns>
+    </TableView>
+
+    <!-- VBox pentru Adăugare/Update agent -->
+    <VBox layoutX="420.0" layoutY="30.0" prefWidth="340.0" spacing="16.0" style="-fx-background-color: #fff3bf; -fx-padding: 18; -fx-border-radius: 10; -fx-background-radius: 10;">
+        <Label style="-fx-font-size: 18px; -fx-text-fill: #997c00; -fx-font-weight: bold;" text="Adaugă / Editează Agent" />
+        <Label text="Nume:" />
+        <TextField fx:id="nameField" promptText="Nume agent" />
+        <Label text="Username:" />
+        <TextField fx:id="usernameField" promptText="Username agent" />
+        <Label text="Parolă:" />
+        <PasswordField fx:id="passwordField" promptText="Parolă" />
+        <Label text="Telefon:" />
+        <TextField fx:id="phoneField" promptText="Telefon" />
+        <HBox spacing="10.0">
+            <Button onAction="#handleAddAgent" style="-fx-background-color: #ffe066; -fx-text-fill: #7d6b00;" text="Adaugă" />
+            <Button onAction="#handleUpdateAgent" style="-fx-background-color: #ffe066; -fx-text-fill: #7d6b00;" text="Update" />
+            <Button onAction="#handleDeleteAgent" style="-fx-background-color: #ffb366; -fx-text-fill: #a62c00;" text="Șterge" />
+        </HBox>
+        <Label fx:id="errorLabel" style="-fx-text-fill: #c0392b; -fx-font-size: 13;" />
+    </VBox>
+    <!-- Buton logout jos dreapta -->
+    <Button fx:id="logoutButton" layoutX="30.0" layoutY="472.0" onAction="#handleLogout" prefWidth="90" style="-fx-background-color: #ffe066; -fx-text-fill: #b30000; -fx-font-weight: bold;" text="Logout" />
+</AnchorPane>

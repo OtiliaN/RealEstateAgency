@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.controller.SignUpController"
+            prefWidth="450" prefHeight="470"
+            style="-fx-background-color: linear-gradient(to bottom right, #fff7f7, #ffe5e5);">
+    <!-- Card container for the form -->
+    <VBox layoutX="45" layoutY="40" prefWidth="360" spacing="18"
+          style="-fx-background-color: white; -fx-background-radius: 18; -fx-effect: dropshadow(gaussian, #e36e6e, 10, 0.2, 0, 2); -fx-padding: 32 28 28 28;">
+        <Text text="ImobAgency - Sign Up"
+              fill="#D33636"
+              style="-fx-font-size: 28px; -fx-font-family: 'Arial Rounded MT Bold'; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, #ffe5e5, 2, 0.1, 0, 1);" />
+        <VBox spacing="7">
+            <Label text="Username:"
+                   style="-fx-font-size: 15px; -fx-text-fill: #b74343; -fx-font-family: 'Segoe UI Semibold';"/>
+            <TextField fx:id="usernameField"
+                       promptText="ex: ion.popescu"
+                       style="-fx-font-size: 15px; -fx-background-radius: 7; -fx-border-color: #ffe5e5; -fx-border-radius: 7;"/>
+        </VBox>
+        <VBox spacing="7">
+            <Label text="Parolă:"
+                   style="-fx-font-size: 15px; -fx-text-fill: #b74343; -fx-font-family: 'Segoe UI Semibold';"/>
+            <PasswordField fx:id="passwordField"
+                           promptText="alege o parolă"
+                           style="-fx-font-size: 15px; -fx-background-radius: 7; -fx-border-color: #ffe5e5; -fx-border-radius: 7;"/>
+        </VBox>
+        <VBox spacing="7">
+            <Label text="Nume complet:"
+                   style="-fx-font-size: 15px; -fx-text-fill: #b74343; -fx-font-family: 'Segoe UI Semibold';"/>
+            <TextField fx:id="fullNameField"
+                       promptText="ex: Ion Popescu"
+                       style="-fx-font-size: 15px; -fx-background-radius: 7; -fx-border-color: #ffe5e5; -fx-border-radius: 7;"/>
+        </VBox>
+        <Label fx:id="errorLabel"
+               style="-fx-text-fill: #d33636; -fx-font-size: 14px; -fx-font-family: 'Segoe UI Semibold'; -fx-padding: 2 0 0 0;"/>
+        <Button fx:id="signUpButton"
+                text="Creează cont"
+                style="-fx-background-color: linear-gradient(to right, #ffb3b3, #ff8686); -fx-text-fill: #800000; -fx-font-size: 17px; -fx-font-weight: bold; -fx-background-radius: 8;"
+                onAction="#handleSignUp"/>
+        <Button fx:id="backToMainButton"
+                text="⟵ Înapoi la pagina principală"
+                style="-fx-background-color: #fffafa; -fx-text-fill: #d33636; -fx-font-size: 15px; -fx-font-family: 'Segoe UI Semibold'; -fx-background-radius: 8; -fx-border-color: #ffdede; -fx-border-radius: 8;"
+                onAction="#handleBackToMain"/>
+    </VBox>
+</AnchorPane>
