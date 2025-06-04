@@ -1,10 +1,10 @@
-# 🏠 Real Estate Agency Management System
+# Real Estate Agency Management System
 
-## 📋 Description
+## Description
 
 The **Real Estate Agency** application is a desktop solution developed in Java for managing a real estate agency. The application implements a layered architecture with the MVC (Model-View-Controller) pattern and offers complete functionality for real estate property management.
 
-## 🏗️ Architecture
+## Architecture
 
 The application uses a **layered architecture** with the following tiers:
 
@@ -25,7 +25,7 @@ The application uses a **layered architecture** with the following tiers:
 - **View**: JavaFX interfaces for each user type
 - **Controller**: Business logic controllers handling user interactions
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **Java**: Core programming language
 - **JavaFX**: User interface framework
@@ -34,7 +34,7 @@ The application uses a **layered architecture** with the following tiers:
 - **Gradle**: Build tool
 - **Observer Pattern**: Real-time synchronization between clients/agents
 
-## 👥 User Roles
+## User Roles
 
 ### 1. Client
 
@@ -89,7 +89,7 @@ The application uses a **layered architecture** with the following tiers:
 
 ![Admin Dashboard](https://github.com/user-attachments/assets/dce2a648-9cca-48f5-99c7-8865eeeeeb49)
 
-## 🚀 Main Features
+## Main Features
 
 ### Authentication & Security
 - **Secure Login System**: Separate authentication and different permissions for Clients, Agents and Admins
@@ -106,7 +106,7 @@ The application uses a **layered architecture** with the following tiers:
 - **Dynamic Filtering**: Real-time filter application with immediate results
 - **Price Range Selection**: Flexible minimum and maximum price filtering
 
-## 🗄️ Database Structure
+## Database Structure
 
 The application uses a relational database with the following main entities:
 
@@ -120,7 +120,7 @@ All database interactions are handled through **Hibernate ORM**, ensuring:
 - Object-relational mapping
 - Transaction management
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 - Java JDK 11 or higher
@@ -146,7 +146,7 @@ cd RealEstateAgency
 - **Schema Generation**: Hibernate handles database schema creation
 - **Sample Data**: Application may include sample properties for testing
 
-## 🎯 Usage Flow
+## Usage Flow
 
 ### For Clients
 1. Launch application → Main window opens
